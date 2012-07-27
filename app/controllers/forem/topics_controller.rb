@@ -14,6 +14,7 @@ module Forem
     end
 
     def create
+      params[:topic].merge!(:user => current_user)
       @topic = Forem::Topic.create(params[:topic])
       flash[:notice] = "Topic has been created!"
       redirect_to @topic
