@@ -5,15 +5,15 @@ require "forem/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "forem"
+  s.name        = "prusswan-forem"
   s.version     = Forem::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Forem."
-  s.description = "TODO: Description of Forem."
+  s.authors     = ["prusswan"]
+  s.email       = ["prusswan@gmail.com"]
+  s.homepage    = "https://github.com/prusswan/forem"
+  s.summary     = "prusswan's forem gem"
+  s.description = "prusswan's forem gem"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = `git ls-files`.split("\n")
 
   s.add_dependency "rails", "~> 3.2.7"
   # s.add_dependency "jquery-rails"

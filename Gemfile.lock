@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    forem (0.0.1)
+    prusswan-forem (0.0.1)
       rails (~> 3.2.7)
 
 GEM
@@ -129,7 +129,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  forem!
   jquery-rails
+  prusswan-forem!
   rspec-rails (~> 2.5)
   sqlite3
