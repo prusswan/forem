@@ -17,6 +17,17 @@ describe "posts" do
       visit new_topic_post_path(@topic)
       page.current_url.should eql(sign_in_url)
     end
+
+    it "should see the post count and last post details" do
+      visit topics_path
+      within "#topics tbody td#posts_count" do
+        page.should have_content("1")
+      end
+
+      within "#topics tbody td#last_post" do
+        page.should have_content("last post was less than a minute ago by some_guy")
+      end
+    end
   end
 
   context "authenticated users" do
