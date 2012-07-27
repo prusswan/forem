@@ -2,6 +2,8 @@ require_dependency "forem/application_controller"
 
 module Forem
   class TopicsController < ApplicationController
+    before_filter :authenticate_forem_user!, :only => [:new, :create]
+
     def index
       @topics = Forem::Topic.all
     end
